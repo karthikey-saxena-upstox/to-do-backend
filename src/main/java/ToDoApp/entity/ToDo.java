@@ -1,12 +1,16 @@
 package ToDoApp.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "todos")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class ToDo {
 
     @Id
@@ -20,4 +24,8 @@ public class ToDo {
     @Column(name = "description")
     private String description;
 
+    public ToDo(String title, String description) {
+        this.title = title;
+        this.description = description;
+    }
 }

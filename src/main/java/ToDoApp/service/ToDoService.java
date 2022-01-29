@@ -2,6 +2,7 @@ package ToDoApp.service;
 
 import ToDoApp.entity.ToDo;
 import ToDoApp.repository.ToDoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,6 +13,7 @@ public class ToDoService {
 
     private final ToDoRepository toDoRepository;
 
+    @Autowired
     public ToDoService(ToDoRepository toDoRepository) {
         this.toDoRepository = toDoRepository;
     }
